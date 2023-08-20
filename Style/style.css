@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    overflow-y: hidden;
+}
+    
+
+.container {
+    width: 800px;
+    height: 180px;
+    position: relative;
+    /* background-color: red; */
+    z-index: 2;
+    /* backdrop-filter: blur(50%); */
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+
+.clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+}
+
+.container::before {
+    /* display: block; */
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    opacity: 0.7;
+    position: absolute;
+
+    top: 50px;
+    left: -50px;
+    z-index: -1;
+    backdrop-filter: blue(40px);
+}
+
+.container::after {
+    /* display: block; */
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    opacity: 0.7;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+    border-radius: 50%;
+    backdrop-filter: blue(40px);
+}
+
+
+.clock span {
+    font-size: 6rem;
+    padding: 30px;
+}
+
+
+#hrs::after {
+
+    content: 'HOURS';
+    font-size: 1.8rem;
+    position: absolute;
+    left: 14%;
+    bottom: 6%;
+
+}
+
+#mins::after {
+
+    content: 'MINS';
+    font-size: 1.8rem;
+    position: absolute;
+    left: 46.5%;
+    bottom: 6%;
+
+}
+
+#sec::after {
+
+    content: 'SEC';
+    font-size: 1.8rem;
+    position: absolute;
+    left: 77%;
+    bottom: 6%;
+
+}
+
+
+
+.detailSection{
+    width: 100%;
+    /* background-color: #fff; */
+    height: 100%;
+    position: absolute;
+    top: 80%;
+    display: flex;
+    justify-content: space-around;
+  
+
+}
+
+nav{
+    /* height: 100%; */
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: center;
+}
+
+.detailSection ul li{
+    display: inline-block;
+    
+   
+}
+
+.detailSection ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+
+    
+}
+
+.detailSection ul li a:hover{
+
+    color: #419aff;
+    box-shadow: 0 0 10px 5px rgba(235, 0, 255, 0.11);
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.completeDate{
+    /* background-color: #fff; */
+    font-size: 1.4rem;
+}
